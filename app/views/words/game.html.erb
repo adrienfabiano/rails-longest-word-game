@@ -1,0 +1,10 @@
+<h1>"******** Welcome to the longest word-game!********"</h1>
+<h2>"Here is your grid:"</h2>
+<h2><%= @grid.join(" ") %></h2>
+
+<form action="/score">
+  <label for="question">Your Word</label> <br>
+  <input type="text" id="question" name="answer" placeholder="*****"> <br>
+  <input type="hidden" name="time_started" value=<%= Time.now %>>
+  <input class="btn btn-primary" type="submit" value="Go on!">
+</form>
